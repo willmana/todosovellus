@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <table>
+    <tr>
+      <th>Tehtava</th>
+      <th>Tehty</th>
+    </tr>
+    {% for tehtava in tehtavat %}
+    <tr>
+      <td>{{ tehtava.name }}</td>
+      <td>{{ tehtava.done }}</td>
+      <td>
+        <form method="POST" action="{{ url_for('tehtavat_set_done', tehtava_id=tehtava.id) }}">
+	         <input type="submit" value="Muuta!"/>
+	     </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
