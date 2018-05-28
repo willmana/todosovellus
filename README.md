@@ -4,6 +4,6 @@ Kurssille Tietokantasovellus-harjoitustyö varten tehtävä ToDo-Sovellus. Toisi
 
 [Tämän hetkinen toimiva sovellus](https://tsoha-python-todosovellus.herokuapp.com/)
 
-[Tarkempi toiminnallisuuskuvaus]()
+[Tarkempi toiminnallisuuskuvaus](https://github.com/willmana/todosovellus/blob/master/dokumentointi/Kuvaus.md)
 
-[Käyttötapaukset]()
+[Käyttötapaukset](https://github.com/willmana/todosovellus/blob/master/dokumentointi/Kayttotapaukset.md)
