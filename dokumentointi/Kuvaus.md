@@ -10,7 +10,7 @@
 
 # Luokkakaavio
 
-(https://github.com/willmana/todosovellus/blob/master/dokumentointi/kuvat/Luokkakaavio.png)
+[Kuva](https://github.com/willmana/todosovellus/blob/master/dokumentointi/kuvat/Luokkakaavio.png)
 
 # Tämän hetkiset ongelmat (Päivitän viikottain)
 
