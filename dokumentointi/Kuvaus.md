@@ -8,7 +8,7 @@
 * Askareiden luokittelu
 * Yhdellä askareella voi olla monta luokkaa
 
-# Luokkakaavio
+# Luokkakaavio (Ensimmäinen luonnos)
 
 ![Kuva](https://github.com/willmana/todosovellus/blob/master/dokumentointi/kuvat/Luokkakaavio.png)
 
