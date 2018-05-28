@@ -8,6 +8,10 @@
 * Askareiden luokittelu
 * Yhdellä askareella voi olla monta luokkaa
 
+# Luokkakaavio
+
+(https://github.com/willmana/todosovellus/blob/master/dokumentointi/kuvat/Luokkakaavio.png)
+
 # Tämän hetkiset ongelmat (Päivitän viikottain)
 
 * Yritin lisätä poisto- toimintaa, mutta tällä hetkellä se vain muuttaa tehtävän totuusarvon truesta falseksi. 
