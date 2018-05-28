@@ -22,6 +22,15 @@ def tehtavat_set_done(tehtava_id):
 
     return redirect(url_for("tehtavat_index"))
 
+@app.route("/tehtava/<tehtava_id>/", methods=["POST"])
+def tehtavat_delete():
+
+    t = Tehtava(request.form.get("name"))
+    
+    db.session().delete(t)
+    db.session().commit()
+
+    return redirect(url_for("tehtavat_index"))
 
 @app.route("/tehtavat/", methods=["POST"])
 def tehtavat_create():
