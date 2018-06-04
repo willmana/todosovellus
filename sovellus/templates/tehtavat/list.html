@@ -14,8 +14,10 @@
         <form method="POST" action="{{ url_for('tehtavat_set_done', tehtava_id=tehtava.id) }}">
 	         <input type="submit" value="Muuta!"/>
 	     </form>
-        <form method="POST" action="{{ url_for('tehtavat_delete', tehtava_id=tehtava.id) }}">
-	         <input type="submit" value="Poista!"/>
+      </td>
+      <td>
+       <form method="POST" action="{{ url_for('tehtavat_delete', tehtava_id=tehtava.id) }}">
+	      <input type="submit" value="Poista!"/>
 	     </form>
       </td>
     </tr>

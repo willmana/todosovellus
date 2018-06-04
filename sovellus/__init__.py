@@ -12,4 +12,6 @@ from sovellus import views
 from sovellus.tehtavat import models
 from sovellus.tehtavat import views
 
+from sovellus.auth import models
+
 db.create_all()
