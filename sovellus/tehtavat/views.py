@@ -1,5 +1,5 @@
 from flask import redirect, render_template, request, url_for
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 from sovellus import app, db
 from sovellus.tehtavat.models import Tehtava
@@ -13,7 +13,7 @@ def tehtavat_index():
 @app.route("/tehtavat/new/")
 @login_required
 def tehtavat_form():
-    return render_template("tehtavat/new.html")
+    return render_template("tehtavat/new.html", form = TaskForm())
 
 @app.route("/tehtava/<tehtava_id>/", methods=["POST"])
 @login_required
