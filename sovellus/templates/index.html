@@ -1,7 +1,23 @@
 {% extends "layout.html" %}
 
 {% block body %}
-  <p>
-    Terveppä terve maailman väestö!
-  </p>
+<p>
+  Terve käyttäjä
+</p>
+
+{% if needs_tasks is defined %}
+<p>
+  The following users need to relearn SQL queries:
+</p>
+
+<ul>
+  {% for user in needs_tasks %}
+  <li>
+    {{user.id}} {{user.name}}
+  </li>
+  {% endfor %}
+</ul>
+
+{% endif %}
+
 {% endblock %}

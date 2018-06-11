@@ -22,6 +22,9 @@ from sovellus.tehtavat import views
 from sovellus.auth import models
 from sovellus.auth import views
 
+from sovellus.kategorialuokat import models
+from sovellus.kategorialuokat import views
+
 from sovellus.auth.models import User
 from os import urandom
 app.config["SECRET_KEY"] = urandom(32)
