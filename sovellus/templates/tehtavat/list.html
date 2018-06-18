@@ -5,11 +5,16 @@
     <tr>
       <th>Tehtava</th>
       <th>Tehty</th>
+      <th>Kategoria</th>
     </tr>
     {% for tehtava in tehtavat %}
     <tr>
       <td>{{ tehtava.name }}</td>
       <td>{{ tehtava.done }}</td>
+      <td>{% for c in tehtava.categories %}
+        {{ c.name }}
+        {% endfor %}
+      </td>
       <td>
         <form method="POST" action="{{ url_for('tehtavat_set_done', tehtava_id=tehtava.id) }}">
 	         <input type="submit" value="Muuta!"/>

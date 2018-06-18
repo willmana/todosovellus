@@ -12,3 +12,15 @@ class Kategoria(Base):
 
     def __init__(self, name):
         self.name = name
+
+    @staticmethod
+    def categories_by_user(id):
+        return db.session().query(Kategoria.id, Kategoria.name).filter_by(account_id=id).all()
+
+    @staticmethod
+    def all_by_id(ids):
+        ret = []
+        for c in db.session().query(Kategoria).filter(Kategoria.id.in_(ids)):
+            print(c)
+            ret.append(c)
+        return ret
