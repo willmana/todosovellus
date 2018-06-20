@@ -4,8 +4,10 @@ from flask_login import login_required, current_user, login_manager
 from sovellus import app, db
 from sovellus.kategorialuokat.models import Kategoria
 from sovellus.kategorialuokat.forms import CategoryForm
+from sqlalchemy.sql import text
 
 @app.route("/kategoriat/", methods=["GET"])
+@login_required
 def categories_index():
    return render_template("kategoriat/list.html", categories = Kategoria.categories_by_user(current_user.id))
 
@@ -21,7 +23,6 @@ def categories_form():
 def categories_delete(category_id):
 
     c = Kategoria.query.get(category_id)
-
 
     db.session().delete(c)
     db.session().commit()

@@ -30,18 +30,3 @@ class User(Base):
 
     def is_authenticated(self):
         return True
-
-    @staticmethod
-    def find_users_with_no_tasks():
-        stmt = text("SELECT Account.id, Account.name FROM Account"
-                     " LEFT JOIN Tehtava ON Tehtava.account_id = Account.id"
-                     " WHERE (Tehtava.done IS null OR Tehtava.done = 1)"
-                     " GROUP BY Account.id"
-                     " HAVING COUNT(Tehtava.id) = 0")
-        res = db.engine.execute(stmt)
-
-        response = []
-        for row in res:
-            response.append({"id":row[0], "name":row[1]})
-
-        return response
