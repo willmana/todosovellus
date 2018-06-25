@@ -23,7 +23,6 @@ def categories_form():
 def categories_delete(category_id):
 
     c = Kategoria.query.get(category_id)
-
     db.session().delete(c)
     db.session().commit()
 
@@ -45,3 +44,9 @@ def categories_create():
     db.session().commit()
 
     return redirect(url_for("categories_index"))
+
+@app.route("/kategoriat/infosivu/<category_id>/", methods=["POST"])
+@login_required
+def categories_open(category_id):
+    k = Kategoria.query.get(category_id)
+    return render_template("kategoriat/infosivu.html", kategoria = k)

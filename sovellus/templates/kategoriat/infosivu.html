@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Kategoria:  <font color="black">{{ kategoria.name }}</font></h1>
+<table class="table table-bordered" style="width:100%">
+    <tbody>
+        <tr>
+            {% if kategoria.listaa_tehtavat is defined %}
+            <td>
+                <b>Luokkaan kuuluvat tehtavat:</b>
+            </td>
+            <td>
+                {% for string in kategoria.listaa_tehtavat(kategoria.id) %}
+                <li>
+                    {{ string }}
+                </li>
+                {% endfor %}
+            </td>
+            {% endif %}
+        </tr>
+    </tbody>
+</table>
+
+<input type="button" value="Takaisin" onclick="history.back()">
+{% endblock %}

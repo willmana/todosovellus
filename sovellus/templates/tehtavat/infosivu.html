@@ -1,0 +1,38 @@
+{% extends "layout.html" %} {% block body %}
+<h1>Tehtava: <font color="black">{{ tehtava.name }}</font></h1>
+<table class="table table-bordered" style="width:100%">
+<tbody>
+  <tr>
+    <td>
+      Kategoria:
+    </td>
+    <td>
+      {% for c in tehtava.categories %} {{ c.name }} {% endfor %}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Kiireellisyys:
+    </td>
+    <td>
+      {{ tehtava.importance }}
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Tehty:
+    </td>
+    <td>
+      {% if tehtava.done %} Kyllä. {% else %} Ei. {% endif %}
+    </td>
+  </tr>
+</tbody>
+</table>
+<td>
+<form method="POST" action="{{ url_for('tehtavat_muokkaa', tehtava_id=tehtava.id) }}">
+    <input type="submit" value="Muokkaa"/>
+    <input type="button" value="Takaisin" onclick="history.back()">
+</form>
+
+</td>
+{% endblock %}

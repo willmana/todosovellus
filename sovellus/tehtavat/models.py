@@ -6,6 +6,7 @@ from sovellus.kategorialuokat.models import Kategoria
 association_table = db.Table('task_category', Base.metadata,
     db.Column('tehtava_id', db.Integer, db.ForeignKey('tehtava.id')),
     db.Column('kategoria_id', db.Integer, db.ForeignKey('kategoria.id'))
+
 )
 
 class Tehtava(Base):
@@ -13,16 +14,19 @@ class Tehtava(Base):
     __tablename__ = 'tehtava'
 
     name = db.Column(db.String(144), nullable=False)
-    done = db.Column(db.Boolean, nullable=False)
-    categories = relationship("Kategoria", secondary=association_table)
 
+    done = db.Column(db.Boolean, nullable=False)
+    importance = db.Column(db.Integer, nullable=False)
+    categories = relationship("Kategoria", secondary=association_table)
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'),
                            nullable=False)
 
-    def __init__(self, name, categories):
+    def __init__(self, name, categories, importance):
         self.name = name
         self.done = False
         self.categories = categories
+        self.importance = importance
+
 
     @staticmethod
     def tasks_by_account(id):
