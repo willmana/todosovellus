@@ -1,13 +1,20 @@
-# Tämänhetkiset toiminnat
+# Sovelluksen toiminnat
 
 * Kirjautuminen
 * Rekisteröityminen
-* Askereen lisäys, "muokkaus" ja poisto
+* Tehtävän lisäys, muokkaus ja poisto
 * Kategorioiden lisäys ja poisto
 * Kaikki askareet ja kategoriat käyttäjäkohtaisia
-* Askareen teossa valitaan sille kategoria
+* Tehtävää luodessa valitaan sille kategoria ja kiireellisyys
 
-# Luokkakaavio (Ensimmäinen luonnos)
+# Puuttuvat toiminnat
+
+* En saanut toimimaan tapausta, jossa kategorian poistaminen poistaisi kaikki sen sisällä olevat tehtävät
+* Taulukkojen sorttaus
+* Käyttäjien poistaminen unohtui
+* Päivämäärän lisääminen tehtävän kylkeen
+
+# Luokkakaavio
 
 ![Kuva](https://github.com/willmana/todosovellus/blob/master/dokumentointi/kuvat/Luokkakaavio.png)
 
