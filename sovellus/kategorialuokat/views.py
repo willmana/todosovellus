@@ -21,7 +21,9 @@ def categories_form():
 @app.route("/kategoriat/delete/<category_id>/", methods=["POST"])
 @login_required
 def categories_delete(category_id):
-
+    stmt = text('DELETE FROM task_category'
+        ' WHERE task_category.kategoria_id = ' + str(category_id))
+    db.engine.execute(stmt)
     c = Kategoria.query.get(category_id)
     db.session().delete(c)
     db.session().commit()

@@ -4,8 +4,8 @@ from sqlalchemy.orm import relationship
 from sovellus.kategorialuokat.models import Kategoria
 
 association_table = db.Table('task_category', Base.metadata,
-    db.Column('tehtava_id', db.Integer, db.ForeignKey('tehtava.id')),
-    db.Column('kategoria_id', db.Integer, db.ForeignKey('kategoria.id'))
+    db.Column('tehtava_id', db.Integer, db.ForeignKey('tehtava.id', ondelete="CASCADE")),
+    db.Column('kategoria_id', db.Integer, db.ForeignKey('kategoria.id', ondelete="CASCADE"))
 
 )
 
