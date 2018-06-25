@@ -6,10 +6,12 @@ Sovelluksessa on nyt mahdollisuus rekisteröityä haluamille tunnuksille ja koke
 
 ## Linkit
 
-[Tämän hetkinen toimiva sovellus](https://tsoha-python-todosovellus.herokuapp.com/)
+[Toimiva sovellus](https://tsoha-python-todosovellus.herokuapp.com/)
 
-[Käyttöohjeet](https://github.com/willmana/todosovellus/blob/master/dokumentointi/ohjeet.md)
+[Asennus- ja käyttöohjeet](https://github.com/willmana/todosovellus/blob/master/dokumentointi/ohjeet.md)
 
 [Tarkempi toiminnallisuuskuvaus](https://github.com/willmana/todosovellus/blob/master/dokumentointi/Kuvaus.md)
 
 [Käyttötapaukset](https://github.com/willmana/todosovellus/blob/master/dokumentointi/Kayttotapaukset.md)
+
+[CREATE TABLE -lauseet](https://github.com/willmana/todosovellus/blob/master/dokumentointi/CREATE_TABLE.md)
